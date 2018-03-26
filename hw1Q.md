@@ -13,7 +13,7 @@
 
 ## 下载几个游戏案例，分别总结资源、对象组织的结构（指资源的目录组织结构与游戏对象树的层次结构）
 
-
+![Assets](/Unity3d/Assets.png)
 
   上图为 Unity官方实例 Roll-a-ball 中资源的目录组织结构。
 
@@ -69,9 +69,7 @@
 </p>
 运行结果如下：
 
-![Alt Result](/hw1/)
-
-
+![result](/Unity3d/Concle.png)
 
 ## 了解 GameObject，Transform，Component 对象
 
@@ -81,6 +79,8 @@
 >**Component**：连接到GameObjects的所有对象的基类    <br/>
 >
 
+![table](Unity3d/table.png)
+
 **1.table对象的属性**：Tag 可以用来标记游戏中不同类型的游戏对象。可使用标记（Tags）通过标记（Tags）名称从脚本中快速找到对象。添加新标记时，可以从游戏对象标记弹出窗口中选择。 Layer可以用于仅对某些特定的对象组投射光纤、渲染或应用光照。
 
 **2.table的Transform属性**：Position，Rotation，Scale
@@ -89,7 +89,7 @@
 
 **用UML图描述三者（对象，组件，变换）的关系：**
 
-
+![UML](Unity3d/UML.png)
 
  ## 编写简单代码验证以下技术的实现:
 
@@ -121,15 +121,15 @@
 >   对于预设，一旦预设发生改变，所有通过预设实例化的对象都会产生相应的变化，而克隆对象不受克隆本体的影响，因此A克隆的对象B不会因为A的改变而相应改变。       
 
        
-   **3.制作 table 预制，写一段代码将 table 预制资源实例化成游戏对象。**
+   **3.制作 table 预置，写一段代码将 table 预置资源实例化成游戏对象。**
 
     public GameObject Table;
 
-	  // Use this for initialization
-	  void Start () {
+	// Use this for initialization
+	void Start () {
         GameObject newTable = (GameObject)Instantiate(Table, transform.position, transform.rotation);
         
-    } 
+    	} 
 
  ## 尝试解释组合模式（Composite Pattern / 一种设计模式）。使用 BroadcastMessage() 方法。
 
